@@ -1,0 +1,11 @@
+h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #647c5c;
+}
+
+h1,
+a {
+  text-decoration: none;
+}
+/* Otros estilos tipográficos */

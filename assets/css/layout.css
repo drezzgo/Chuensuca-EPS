@@ -1,0 +1,14 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0 10px;
+  background-color: #fff;
+}
+
+main {
+  padding-top: 100px;
+  /* Ajusta el valor según el alto del header fijo */
+}

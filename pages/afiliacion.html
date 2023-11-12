@@ -7,7 +7,7 @@
     <meta name="copyrigth" content="drezzgo">
 
     <title>Chuensuca EPS</title>
-    <link rel="icon" href="images/Chuensuca_logo.png">
+    <link rel="icon" href="../assets/img/Chuensuca_logo.png">
     <meta name="description" content="Chuensuca es un aplicativo web que simula la pagina
     web y las funcionalidades usuales de una EPS colombiana">
     <meta name="viewport" content="EPS, Colombia, Afiliarse">  
@@ -15,83 +15,103 @@
 
     <!-- Open graph "cuando se comparte como se ve"--> 
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css"">
 </head>
-
-<header>
-    
-    <a href="index.html">
-        <img id="logo_banner" src="assets/images/Chuensuca_logo.png" alt="Chuensuca EPS">
-    </a>
-    
-    <nav>
-        <a href="afiliacion.html">Afiliate</a>
-        <a href="adulto_mayor.html">Programas al adulto mayor</a>
-        <a href="login.html">Portal transaccional</a>
-    </nav>
-</header>
-
 <body>
+    <header>
+        <nav class="navbar">
+            <span class="hamburger-btn material-symbols-rounded">menu</span>
+            <a href="../index.html" class="logo">
+                <img id="logo_banner" src="../assets/img/Chuensuca_logo.png" alt="logo">
+                <h1>Chuensuca EPS</h1>
+            </a>
+            <ul class="links">
+                <span class="close-btn material-symbols-rounded">close</span>
+                <li><a href="afiliacion.html" id="afiliacion">Afiliate</a></li>
+                <li><a href="adulto_mayor.html" id="adulto_mayor">Programas al adulto mayor</a></li>
+                <li><a href="login.html" id="login">Portal transaccional</a></li>
+            </ul>
+            <button class="login-btn">Portal transaccional</button>
+        </nav>
+    </header>
+
     <main>
-        <section>
-            
-            <form method="post" action="/">
-                <fieldset>
-                    <legend><h1>Afiliate</h1></legend>
-                    <div class="select">
-                        <select name="" id="">
-                            <option value=""></option>
-                            <option value="C">CEDULA</option>
-                            <option value="E">CEDULA EXTRANJERA</option>
-                            <option value="R">REGISTRO CIVIL</option>
-                            <option value="RT">TARJETA DE IDENTIDAD</option>
-                        </select>
-                        <label class="select-label">Tipo de identificación</label>
-                    </div>
-                    <div>
-                        <label>
-                            <input 
-                            type="text"
-                            name="Num_id"
-                            placeholder="Número de identificación"
-                            >
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            <input 
-                            type="password"
-                            name="Password"
-                            placeholder="Contraseña"
-                            >
-                        </label>
-                    </div>
-                    <div class="mensaje-error">
-                        <span></span>
-                    </div>
-                    <div>
-                        <div class="izquierda">
-                            <a href="afiliacion.html">¿Aun no estas afiliado con nosotros? ¡Afiliate! </a>
+        <div class="card">
+                <form method="post" id="afiliacion" class="formulario_login">
+                    <fieldset>
+                        <legend><h2>Afiliarse</h2></legend>
+                        <div class="select">
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value="C">CEDULA</option>
+                                <option value="E">CEDULA EXTRANJERA</option>
+                                <option value="R">REGISTRO CIVIL</option>
+                                <option value="RT">TARJETA DE IDENTIDAD</option>
+                            </select>
+                            <label class="select-label">Tipo de identificación</label>
                         </div>
-                        <div class="derecha">
-                            
+                        <div>
+                            <label>
+                                <input 
+                                type="text"
+                                name="Num_id"
+                                placeholder="Número de identificación"
+                                >
+                            </label>
                         </div>
-                    </div>
-                    <div class="boton">
-                        <input type="submit" value="Iniciar sesión">
-                    </div>
-
-
-                </fieldset>
-            </form>
-
-        </section>
-
+                        <div>
+                            <label>
+                                <input 
+                                type="password"
+                                name="Password"
+                                placeholder="Contraseña"
+                                >
+                            </label>
+                        </div>
+                        <div class="mensaje-error">
+                            <span></span>
+                        </div>
+                        <div>
+                            <div class="izquierda">
+                                <a href="afiliacion.html">¿Aun no estas afiliado con nosotros? ¡Afiliate! </a>
+                            </div>
+                            <div class="derecha">
+                                
+                            </div>
+                        </div>
+                        <div class="boton">
+                            <input type="submit" value="Iniciar sesión">
+                        </div>
+                    </fieldset>
+        </div>
     </main>
-    <script src="assets/js/script.js"></script>
+
+    <script>
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "firebase/app";
+        import { getAnalytics } from "firebase/analytics";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+        apiKey: "AIzaSyBUfczM-QD7bkX_b64e9ATX0lhQwvSXPVU",
+        authDomain: "chuensuca-prueba.firebaseapp.com",
+        projectId: "chuensuca-prueba",
+        storageBucket: "chuensuca-prueba.appspot.com",
+        messagingSenderId: "458201558340",
+        appId: "1:458201558340:web:5fe6a318adaf23a4c3bb11",
+        measurementId: "G-EHHDVX6FCF"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+    <!--Scrips Personalizados-->
+    <script src="../assets/js/script.js"></script>
+
+    <footer></footer>
 </body>
-
-<footer>
-</footer>
-
 </html>
