@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!meta name="author" content="Andres Felipe Gongora Ramirez">
+    <meta name="copyrigth" content="drezzgo">
+
+    <title>Chuensuca EPS</title>
+    <link rel="icon" href="images/Chuensuca_logo.png">
+    <meta name="description" content="Chuensuca es un aplicativo web que simula la pagina
+    web y las funcionalidades usuales de una EPS colombiana">
+    <meta name="viewport" content="EPS, Colombia, Afiliarse">  
+    <meta name="theme-color" content="#F9B572">
+
+    <!-- Open graph "cuando se comparte como se ve"--> 
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<header>
+    
+    <a href="index.html">
+        <img id="logo_banner" src="assets/images/Chuensuca_logo.png" alt="Chuensuca EPS">
+    </a>
+    
+    <nav>
+        <a href="afiliacion.html">Afiliate</a>
+        <a href="adulto_mayor.html">Programas al adulto mayor</a>
+        <a href="login.html">Portal transaccional</a>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <section>
+            
+            <form method="post" action="login.php" class="formulario__login">
+                <fieldset>
+                    <legend><h1>Iniciar sesion</h1></legend>
+                    <div class="select">
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value="C">CEDULA</option>
+                            <option value="E">CEDULA EXTRANJERA</option>
+                            <option value="R">REGISTRO CIVIL</option>
+                            <option value="RT">TARJETA DE IDENTIDAD</option>
+                        </select>
+                        <label class="select-label">Tipo de identificación</label>
+                    </div>
+                    <div>
+                        <label>
+                            <input 
+                            type="text"
+                            name="Num_id"
+                            placeholder="Número de identificación"
+                            >
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input 
+                            type="password"
+                            name="Password"
+                            placeholder="Contraseña"
+                            >
+                        </label>
+                    </div>
+                    <div class="mensaje-error">
+                        <span></span>
+                    </div>
+                    <div>
+                        <div class="izquierda">
+                            <a href="afiliacion.html">¿Aun no estas afiliado con nosotros? ¡Afiliate! </a>
+                        </div>
+                        <div class="derecha">
+                            
+                        </div>
+                    </div>
+                    <div class="boton">
+                        <input type="submit" value="Iniciar sesión">
+                    </div>
+
+
+                </fieldset>
+            </form>
+
+        </section>
+
+    </main>
+</body>
+
+<footer>
+</footer>
+
+</html>

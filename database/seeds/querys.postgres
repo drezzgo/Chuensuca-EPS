@@ -1,0 +1,11 @@
+CREATE TABLE usuarios(
+    id INT PRIMARY KEY,
+    nombre VARCHAR(50),
+    edad INT,
+    fecha_ingreso DATE,
+    ciudad_afiliacion VARCHAR(15),
+    password VARCHAR(50)
+)
+
+INSERT INTO usuarios (id, nombre, edad, fecha_ingreso, ciudad_afiliacion, password) 
+VALUES (1, 'Andres Felipe Gongora Ramirez', 21, '2023-11-11', 'Bogota', 'Mirris14');
